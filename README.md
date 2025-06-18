@@ -38,3 +38,11 @@ Our stakeholders will be other people in class, they will be involved through tr
 2. two types of games (group (rps) or fighting each other ())
 
 3. A timer for movements to happen (so both players play at once)
+
+## Design
+
+### Structure:
+
+We first plan to make the FWEA game and use different people to do the 'poses' so that our algorithm is trained on different places and scenes. We're gonna do it like this because that is the main game and is used in both styles of game.
+
+### 
