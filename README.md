@@ -29,7 +29,9 @@ People want more engaging games and need more entertainment, we're gonna solve t
 Our stakeholders will be other people in class, they will be involved through training our module as well.
 
 ### Research:
-1. Divineko
+1. Divineko: https://divineko.fandom.com/wiki/Wiki
+![divineko](image.png)
+a cat casts spells uding drawinds of symbols.
 
 ### Features:
 
