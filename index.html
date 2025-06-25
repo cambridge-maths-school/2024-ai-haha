@@ -40,12 +40,13 @@ body{
 
 <canvas id="game"></canvas>
 <canvas id="who"></canvas>
-<canvas id="cam"></canvas>
+<div id="cam"></div>
+<!-- add the top left corner canvas thing -->
 <canvas id="card"></canvas>
 
 <div>Teachable Machine Image Model</div>
 <button type="button" onclick="init()">Start</button>
-<div id="webcam-container"></div>
+<!-- <div id="webcam-container"></div> -->
 <div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
@@ -72,13 +73,13 @@ body{
 
         // Convenience function to setup a webcam
         const flip = true; // whether to flip the webcam
-        webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+        webcam = new tmImage.Webcam(500, 500, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
         await webcam.play();
         window.requestAnimationFrame(loop);
 
         // append elements to the DOM
-        document.getElementById("webcam-container").appendChild(webcam.canvas);
+        document.getElementById("cam").appendChild(webcam.canvas);
         labelContainer = document.getElementById("label-container");
         for (let i = 0; i < maxPredictions; i++) { // and class labels
             labelContainer.appendChild(document.createElement("div"));
