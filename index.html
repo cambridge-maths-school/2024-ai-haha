@@ -45,7 +45,7 @@ body{
 <canvas id="card"></canvas>
 
 <div>Teachable Machine Image Model</div>
-<button type="button" onclick="init()">Start</button>
+<button type="button" onclick="display()">Start</button>
 <!-- <div id="webcam-container"></div> -->
 <div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
@@ -60,6 +60,19 @@ body{
     let model, webcam, labelContainer, maxPredictions;
 
     // Load the image model and setup the webcam
+    count = 0
+    async function display(){
+      if (count == 0){
+        init()
+      }
+      else if (count%2 == 0){
+        document.getElementById("cam").style.display = "block"
+      }
+      else{
+        document.getElementById("cam").style.display = "none"
+      }
+      count++
+    }
     async function init() {
         const modelURL = urlAI + "model.json";
         const metadataURL = urlAI + "metadata.json";
